@@ -10,9 +10,8 @@ import AppKit
 extension ViewModel {
     func updateExtendedDynamicRangeValue(_ screen: NSScreen) {
         var read = screen.maximumExtendedDynamicRangeColorComponentValue
-        if read < 1 { read = 1 }
         if read > 2 { read = 2 }
         print("[*] extended dynamic range value: \(read)")
-        dynamicRangeMultiplier = read
+        dynamicRangeMultiplier = max(1.0, read * 0.8)
     }
 }
