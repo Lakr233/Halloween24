@@ -18,10 +18,10 @@ class _CucurbitaMetalView: NSView {
 
     public var brightness: Float {
         get {
-            renderer.brightness
+            Float(renderer.brightness.value)
         }
         set {
-            renderer.brightness = newValue
+            renderer.brightness.setTarget(.init(newValue))
         }
     }
 

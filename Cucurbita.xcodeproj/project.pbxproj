@@ -35,6 +35,7 @@
 		50D50E562CD38FEA009B9F28 /* DimmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E552CD38FEA009B9F28 /* DimmingView.swift */; };
 		50D50E592CD39558009B9F28 /* AppDelegate+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E582CD39558009B9F28 /* AppDelegate+Menu.swift */; };
 		50D50E5B2CD3D28F009B9F28 /* ViewModel+EDR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E5A2CD3D28F009B9F28 /* ViewModel+EDR.swift */; };
+		50D50E5E2CD3D82E009B9F28 /* SpringInterpolation in Frameworks */ = {isa = PBXBuildFile; productRef = 50D50E5D2CD3D82E009B9F28 /* SpringInterpolation */; };
 		689F16002CD3B30600AF554E /* CucurbitaMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F15FF2CD3B30600AF554E /* CucurbitaMetalView.swift */; };
 		689F16022CD3B57100AF554E /* CucurbitaMetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F16012CD3B57100AF554E /* CucurbitaMetalRenderer.swift */; };
 		689F16062CD3BABD00AF554E /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 689F16052CD3BABD00AF554E /* Shader.metal */; };
@@ -81,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D50E5E2CD3D82E009B9F28 /* SpringInterpolation in Frameworks */,
 				50D50E4A2CD37DBD009B9F28 /* Pow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +211,7 @@
 			name = Cucurbita;
 			packageProductDependencies = (
 				50D50E492CD37DBD009B9F28 /* Pow */,
+				50D50E5D2CD3D82E009B9F28 /* SpringInterpolation */,
 			);
 			productName = Halloween24;
 			productReference = 503742292CD35EF5009C1F43 /* Cucurbita.app */;
@@ -241,6 +244,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				50D50E482CD37DBD009B9F28 /* XCRemoteSwiftPackageReference "Pow" */,
+				50D50E5C2CD3D82E009B9F28 /* XCRemoteSwiftPackageReference "SpringInterpolation" */,
 			);
 			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
@@ -514,6 +518,14 @@
 				minimumVersion = 1.0.4;
 			};
 		};
+		50D50E5C2CD3D82E009B9F28 /* XCRemoteSwiftPackageReference "SpringInterpolation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/SpringInterpolation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -521,6 +533,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 50D50E482CD37DBD009B9F28 /* XCRemoteSwiftPackageReference "Pow" */;
 			productName = Pow;
+		};
+		50D50E5D2CD3D82E009B9F28 /* SpringInterpolation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50D50E5C2CD3D82E009B9F28 /* XCRemoteSwiftPackageReference "SpringInterpolation" */;
+			productName = SpringInterpolation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

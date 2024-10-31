@@ -8,6 +8,7 @@
 import Cocoa
 import Metal
 import MetalKit
+import SpringInterpolation
 
 typealias CucurbitaMetalRendererUpdateCallback = (Float) -> Void
 
@@ -23,7 +24,20 @@ class CucurbitaMetalRenderer: NSObject {
     var cucurbitaTexture: MTLTexture!
     var lastTime: CFTimeInterval = -1.0
 
-    public var brightness: Float = 1.0
+    public var brightness: SpringInterpolation = .init(
+        config: .init(
+            angularFrequency: 5,
+            dampingRatio: 1,
+            threshold: 0.05,
+            stopWhenHitTarget: true
+        ),
+        context: .init(
+            currentPos: 1.0,
+            currentVel: 0,
+            targetPos: 1.0
+        )
+    )
+    public var brightnessFloat: Float = 1.0
     public var onUpdate: CucurbitaMetalRendererUpdateCallback?
 
     private struct Vertex {
@@ -115,6 +129,11 @@ extension CucurbitaMetalRenderer: MTKViewDelegate {
             update(deltaTime)
         }
 
+        if !brightness.completed {
+            brightness.update(withDeltaTime: .init(deltaTime))
+        }
+        brightnessFloat = Float(brightness.value)
+
         let renderCommandBuffer = commandQueue.makeCommandBuffer()!
 
         let renderPassDescriptor = MTLRenderPassDescriptor()
@@ -128,7 +147,7 @@ extension CucurbitaMetalRenderer: MTKViewDelegate {
         )!
         renderCommandEncoder.setRenderPipelineState(renderPipeline)
         renderCommandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
-        renderCommandEncoder.setVertexBytes(&brightness, length: 4, index: 1)
+        renderCommandEncoder.setVertexBytes(&brightnessFloat, length: 4, index: 1)
         renderCommandEncoder.setFragmentTexture(cucurbitaTexture, index: 0)
         renderCommandEncoder.drawPrimitives(
             type: .triangle,
@@ -149,5 +168,17 @@ extension NSImage {
         guard let imageData = tiffRepresentation else { return nil }
         guard let source = CGImageSourceCreateWithData(imageData as CFData, nil) else { return nil }
         return CGImageSourceCreateImageAtIndex(source, 0, nil)
+    }
+}
+
+private extension SpringInterpolation {
+    var completed: Bool {
+        ceil(abs(context.currentPos.distance(to: context.targetPos))) <= config.threshold
+    }
+}
+
+private extension SpringInterpolation2D {
+    var completed: Bool {
+        x.completed && y.completed
     }
 }
