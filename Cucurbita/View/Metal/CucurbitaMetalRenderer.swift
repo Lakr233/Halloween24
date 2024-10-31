@@ -71,9 +71,11 @@ class CucurbitaMetalRenderer: NSObject {
             .init(position: .init(1, 1, 0, 1), uv: .init(1, 0)),
         ]
         let vertexBuffer = vertices.withUnsafeBytes { pointer in
-            device.makeBuffer(bytes: pointer.baseAddress!,
-                              length: MemoryLayout<Vertex>.stride * vertices.count,
-                              options: .storageModeManaged)
+            device.makeBuffer(
+                bytes: pointer.baseAddress!,
+                length: MemoryLayout<Vertex>.stride * vertices.count,
+                options: .storageModeManaged
+            )
         }
         self.vertexBuffer = vertexBuffer!
         targetFrameSize = .init(Float(size.width), Float(size.height))
