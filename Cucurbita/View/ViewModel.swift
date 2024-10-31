@@ -65,6 +65,7 @@ class ViewModel: ObservableObject {
         } else {
             tutorialCompleted = true
             tutorialIndex = 0
+            life = 0.8
         }
     }
 }
