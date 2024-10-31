@@ -116,7 +116,7 @@ struct ContentView: View {
                     .overlay(
                         ZStack {
                             CucurbitaDeadView()
-                            CucurbitaView()
+                            CucurbitaMetalView(brightness: 2.0 * vm.life)
                                 .conditionalEffect(
                                     .repeat(
                                         .glow(color: .light, radius: 32),
