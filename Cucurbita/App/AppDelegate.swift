@@ -56,7 +56,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let screenIdentifier = mainScreen.localizedName
         guard previousFocusedScreen != screenIdentifier else { return }
-        print("[*] attached to screen: \(screenIdentifier)")
         previousFocusedScreen = screenIdentifier
         closeAllWindows()
 
