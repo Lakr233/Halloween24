@@ -22,10 +22,10 @@ class CucurbitaMetalRenderer: NSObject {
     var commandQueue: MTLCommandQueue!
     var cucurbitaTexture: MTLTexture!
     var lastTime: CFTimeInterval = -1.0
-    
+
     public var brightness: Float = 1.0
     public var onUpdate: CucurbitaMetalRendererUpdateCallback?
-    
+
     private struct Vertex {
         var position: simd_float4
         var uv: simd_float2
@@ -35,7 +35,7 @@ class CucurbitaMetalRenderer: NSObject {
         self.device = device
         makeRenderPipeline(device, size: size)
     }
-    
+
     func makeRenderPipeline(_ device: MTLDevice, size: CGSize) {
         guard !isPrepared else {
             return
@@ -65,7 +65,7 @@ class CucurbitaMetalRenderer: NSObject {
             .init(position: .init(1, -1, 0, 1), uv: .init(1, 1)),
             .init(position: .init(-1, -1, 0, 1), uv: .init(0, 1)),
             .init(position: .init(-1, 1, 0, 1), uv: .init(0, 0)),
-            
+
             .init(position: .init(1, -1, 0, 1), uv: .init(1, 1)),
             .init(position: .init(-1, 1, 0, 1), uv: .init(0, 0)),
             .init(position: .init(1, 1, 0, 1), uv: .init(1, 0)),
@@ -82,7 +82,7 @@ class CucurbitaMetalRenderer: NSObject {
         commandQueue = device.makeCommandQueue()!
 
         let textureLoader = MTKTextureLoader(device: device)
-        
+
         guard let image = NSImage(named: "JackLantern") else {
             return
         }
@@ -92,14 +92,14 @@ class CucurbitaMetalRenderer: NSObject {
 
         isPrepared = true
     }
-    
+
     func resize(_ size: CGSize) {
         targetFrameSize = .init(Float(size.width), Float(size.height))
     }
 }
 
 extension CucurbitaMetalRenderer: MTKViewDelegate {
-    func draw(in view: MTKView) {
+    func draw(in _: MTKView) {
         guard isPrepared else { return }
 
         guard let drawable = targetLayer?.nextDrawable() else { return }
@@ -140,15 +140,13 @@ extension CucurbitaMetalRenderer: MTKViewDelegate {
         renderCommandBuffer.present(drawable)
         renderCommandBuffer.commit()
     }
-    
-    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        
-    }
+
+    func mtkView(_: MTKView, drawableSizeWillChange _: CGSize) {}
 }
 
 extension NSImage {
     var cgImage: CGImage? {
-        guard let imageData = self.tiffRepresentation else { return nil }
+        guard let imageData = tiffRepresentation else { return nil }
         guard let source = CGImageSourceCreateWithData(imageData as CFData, nil) else { return nil }
         return CGImageSourceCreateImageAtIndex(source, 0, nil)
     }

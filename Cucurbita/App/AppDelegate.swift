@@ -52,6 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             closeAllWindows()
             return
         }
+        defer { ViewModel.shared.updateExtendedDynamicRangeValue(mainScreen) }
 
         let screenIdentifier = mainScreen.localizedName
         guard previousFocusedScreen != screenIdentifier else { return }

@@ -48,6 +48,8 @@ class ViewModel: ObservableObject {
 
     @Published var life: Double = 1
 
+    @Published var dynamicRangeMultiplier: Double = 1
+
     func tik() {
         guard life > 0.05 else { return }
         life *= 0.995

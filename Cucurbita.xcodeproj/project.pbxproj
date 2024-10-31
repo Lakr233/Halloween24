@@ -34,6 +34,7 @@
 		50D50E542CD38FD2009B9F28 /* DimmingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E532CD38FD2009B9F28 /* DimmingController.swift */; };
 		50D50E562CD38FEA009B9F28 /* DimmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E552CD38FEA009B9F28 /* DimmingView.swift */; };
 		50D50E592CD39558009B9F28 /* AppDelegate+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E582CD39558009B9F28 /* AppDelegate+Menu.swift */; };
+		50D50E5B2CD3D28F009B9F28 /* ViewModel+EDR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E5A2CD3D28F009B9F28 /* ViewModel+EDR.swift */; };
 		689F16002CD3B30600AF554E /* CucurbitaMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F15FF2CD3B30600AF554E /* CucurbitaMetalView.swift */; };
 		689F16022CD3B57100AF554E /* CucurbitaMetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F16012CD3B57100AF554E /* CucurbitaMetalRenderer.swift */; };
 		689F16062CD3BABD00AF554E /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 689F16052CD3BABD00AF554E /* Shader.metal */; };
@@ -69,6 +70,7 @@
 		50D50E552CD38FEA009B9F28 /* DimmingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingView.swift; sourceTree = "<group>"; };
 		50D50E572CD3940B009B9F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		50D50E582CD39558009B9F28 /* AppDelegate+Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Menu.swift"; sourceTree = "<group>"; };
+		50D50E5A2CD3D28F009B9F28 /* ViewModel+EDR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+EDR.swift"; sourceTree = "<group>"; };
 		689F15FF2CD3B30600AF554E /* CucurbitaMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucurbitaMetalView.swift; sourceTree = "<group>"; };
 		689F16012CD3B57100AF554E /* CucurbitaMetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucurbitaMetalRenderer.swift; sourceTree = "<group>"; };
 		689F16052CD3BABD00AF554E /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				68CBEBD12CD3B25600483DAF /* Metal */,
 				503742522CD361FA009C1F43 /* ViewModel.swift */,
 				50D50E422CD374AE009B9F28 /* ViewModel+Location.swift */,
+				50D50E5A2CD3D28F009B9F28 /* ViewModel+EDR.swift */,
 				5037425C2CD362DA009C1F43 /* ContentView.swift */,
 				501105882CD365E700AF74F0 /* CucurbitaView.swift */,
 				50D50E4D2CD3850C009B9F28 /* CucurbitaDeadView.swift */,
@@ -271,6 +274,7 @@
 				5037425B2CD362BB009C1F43 /* Ext+Window.swift in Sources */,
 				501105892CD365E700AF74F0 /* CucurbitaView.swift in Sources */,
 				689F16002CD3B30600AF554E /* CucurbitaMetalView.swift in Sources */,
+				50D50E5B2CD3D28F009B9F28 /* ViewModel+EDR.swift in Sources */,
 				50D50E522CD38F8F009B9F28 /* NoneInteractWindowController.swift in Sources */,
 				50D50E562CD38FEA009B9F28 /* DimmingView.swift in Sources */,
 				50D50E542CD38FD2009B9F28 /* DimmingController.swift in Sources */,
