@@ -19,7 +19,7 @@ class ViewModel: ObservableObject {
         RunLoop.main.add(timer, forMode: .common)
     }
 
-    @PublishedPersist(key: "CucurbitaLocation", defaultValue: .init(unionX: 0.75, unionY: 0.75))
+    @PublishedPersist(key: "CucurbitaLocation", defaultValue: .init(unionX: 0, unionY: 0))
     var cucurbitaUnionLocation: CucurbitaLocation
 
     let cucurbitaSize: Double = 150

@@ -15,6 +15,8 @@ struct DimmingView: View {
         .interpolatingSpring(stiffness: 32, damping: 32)
     }
 
+    let maxOpacity: Double = 0.9
+
     var body: some View {
         ZStack {
             Rectangle()
@@ -24,7 +26,7 @@ struct DimmingView: View {
                         opacityControl = 1
                     }
                 }
-                .foregroundStyle(.black.opacity(0.85 - 0.5 * vm.life))
+                .foregroundStyle(.black.opacity(maxOpacity - vm.life * maxOpacity))
         }
         .animation(animation, value: opacityControl)
         .animation(animation, value: vm.life)

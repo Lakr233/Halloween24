@@ -8,6 +8,7 @@
 import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
+    var previousFocusedScreen: String = "Unknown Screen Configuration"
     var windowController: NSWindowController? = nil
     var dimmingController: NSWindowController? = nil
 
@@ -38,14 +39,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         .terminateNow
     }
 
-    @objc func resetWindows() {
+    func closeAllWindows() {
         windowController?.close()
         windowController = nil
 
         dimmingController?.close()
         dimmingController = nil
+    }
 
-        guard let mainScreen = NSScreen.main else { return }
+    @objc func resetWindows() {
+        guard let mainScreen = NSScreen.main else {
+            closeAllWindows()
+            return
+        }
+
+        let screenIdentifier = mainScreen.localizedName
+        guard previousFocusedScreen != screenIdentifier else { return }
+        print("[*] attached to screen: \(screenIdentifier)")
+        previousFocusedScreen = screenIdentifier
+        closeAllWindows()
+
         let newWindowController = TopmostWindowController(screen: mainScreen)
         newWindowController.window?.contentViewController = HostingController(ContentView())
         newWindowController.window?.setFrame(mainScreen.frame, display: true)
