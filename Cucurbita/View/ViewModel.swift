@@ -46,7 +46,7 @@ class ViewModel: ObservableObject {
     let cucurbitaLightCount: Int = 16
     let cucurbitaLightExtendingBoundary: Double = 16
 
-    @Published var life: Double = 1
+    @Published var life: Double = 0.8
 
     @Published var dynamicRangeMultiplier: Double = 1
 
