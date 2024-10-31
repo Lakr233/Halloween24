@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		501105852CD3658100AF74F0 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 501105842CD3658100AF74F0 /* InfoPlist.xcstrings */; };
+		501105872CD3658700AF74F0 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 501105862CD3658700AF74F0 /* Localizable.xcstrings */; };
+		501105892CD365E700AF74F0 /* CucurbitaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501105882CD365E700AF74F0 /* CucurbitaView.swift */; };
+		5037424A2CD3608C009C1F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 503742452CD3608C009C1F43 /* Assets.xcassets */; };
+		5037424F2CD360B5009C1F43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037424E2CD360B5009C1F43 /* main.swift */; };
+		503742512CD361A3009C1F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503742502CD361A3009C1F43 /* AppDelegate.swift */; };
+		503742532CD361FA009C1F43 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503742522CD361FA009C1F43 /* ViewModel.swift */; };
+		503742552CD3622C009C1F43 /* TopmostWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503742542CD3622C009C1F43 /* TopmostWindow.swift */; };
+		503742572CD3626D009C1F43 /* TopmostWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503742562CD3626D009C1F43 /* TopmostWindowController.swift */; };
+		503742592CD36293009C1F43 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503742582CD36293009C1F43 /* HostingController.swift */; };
+		5037425B2CD362BB009C1F43 /* Ext+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037425A2CD362BB009C1F43 /* Ext+Window.swift */; };
+		5037425D2CD362DA009C1F43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037425C2CD362DA009C1F43 /* ContentView.swift */; };
+		50D50E392CD36CD9009B9F28 /* PublishedPersist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E372CD36CD9009B9F28 /* PublishedPersist.swift */; };
+		50D50E3A2CD36CD9009B9F28 /* PersistProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E362CD36CD9009B9F28 /* PersistProvider.swift */; };
+		50D50E3B2CD36CD9009B9F28 /* UserDefaultPersistProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E382CD36CD9009B9F28 /* UserDefaultPersistProvider.swift */; };
+		50D50E3C2CD36CD9009B9F28 /* Persist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E352CD36CD9009B9F28 /* Persist.swift */; };
+		50D50E432CD374AE009B9F28 /* ViewModel+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E422CD374AE009B9F28 /* ViewModel+Location.swift */; };
+		50D50E452CD378FE009B9F28 /* CucurbitaLightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E442CD378FE009B9F28 /* CucurbitaLightingView.swift */; };
+		50D50E472CD37AA8009B9F28 /* LightingSparkleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E462CD37AA8009B9F28 /* LightingSparkleView.swift */; };
+		50D50E4A2CD37DBD009B9F28 /* Pow in Frameworks */ = {isa = PBXBuildFile; productRef = 50D50E492CD37DBD009B9F28 /* Pow */; };
+		50D50E4C2CD37DF6009B9F28 /* Ext+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E4B2CD37DF6009B9F28 /* Ext+Notification.swift */; };
+		50D50E4E2CD3850C009B9F28 /* CucurbitaDeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E4D2CD3850C009B9F28 /* CucurbitaDeadView.swift */; };
+		50D50E502CD38F68009B9F28 /* NoneInteractWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E4F2CD38F68009B9F28 /* NoneInteractWindow.swift */; };
+		50D50E522CD38F8F009B9F28 /* NoneInteractWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E512CD38F8F009B9F28 /* NoneInteractWindowController.swift */; };
+		50D50E542CD38FD2009B9F28 /* DimmingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E532CD38FD2009B9F28 /* DimmingController.swift */; };
+		50D50E562CD38FEA009B9F28 /* DimmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E552CD38FEA009B9F28 /* DimmingView.swift */; };
+		50D50E592CD39558009B9F28 /* AppDelegate+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E582CD39558009B9F28 /* AppDelegate+Menu.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		501105842CD3658100AF74F0 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		501105862CD3658700AF74F0 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		501105882CD365E700AF74F0 /* CucurbitaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucurbitaView.swift; sourceTree = "<group>"; };
+		503742292CD35EF5009C1F43 /* Cucurbita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cucurbita.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		503742452CD3608C009C1F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		503742472CD3608C009C1F43 /* Ent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ent.entitlements; sourceTree = "<group>"; };
+		5037424E2CD360B5009C1F43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		503742502CD361A3009C1F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		503742522CD361FA009C1F43 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		503742542CD3622C009C1F43 /* TopmostWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopmostWindow.swift; sourceTree = "<group>"; };
+		503742562CD3626D009C1F43 /* TopmostWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopmostWindowController.swift; sourceTree = "<group>"; };
+		503742582CD36293009C1F43 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		5037425A2CD362BB009C1F43 /* Ext+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Window.swift"; sourceTree = "<group>"; };
+		5037425C2CD362DA009C1F43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		50D50E352CD36CD9009B9F28 /* Persist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persist.swift; sourceTree = "<group>"; };
+		50D50E362CD36CD9009B9F28 /* PersistProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistProvider.swift; sourceTree = "<group>"; };
+		50D50E372CD36CD9009B9F28 /* PublishedPersist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedPersist.swift; sourceTree = "<group>"; };
+		50D50E382CD36CD9009B9F28 /* UserDefaultPersistProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultPersistProvider.swift; sourceTree = "<group>"; };
+		50D50E422CD374AE009B9F28 /* ViewModel+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+Location.swift"; sourceTree = "<group>"; };
+		50D50E442CD378FE009B9F28 /* CucurbitaLightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucurbitaLightingView.swift; sourceTree = "<group>"; };
+		50D50E462CD37AA8009B9F28 /* LightingSparkleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingSparkleView.swift; sourceTree = "<group>"; };
+		50D50E4B2CD37DF6009B9F28 /* Ext+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Notification.swift"; sourceTree = "<group>"; };
+		50D50E4D2CD3850C009B9F28 /* CucurbitaDeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucurbitaDeadView.swift; sourceTree = "<group>"; };
+		50D50E4F2CD38F68009B9F28 /* NoneInteractWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneInteractWindow.swift; sourceTree = "<group>"; };
+		50D50E512CD38F8F009B9F28 /* NoneInteractWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneInteractWindowController.swift; sourceTree = "<group>"; };
+		50D50E532CD38FD2009B9F28 /* DimmingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingController.swift; sourceTree = "<group>"; };
+		50D50E552CD38FEA009B9F28 /* DimmingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingView.swift; sourceTree = "<group>"; };
+		50D50E572CD3940B009B9F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		50D50E582CD39558009B9F28 /* AppDelegate+Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Menu.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		503742262CD35EF5009C1F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50D50E4A2CD37DBD009B9F28 /* Pow in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		503742202CD35EF5009C1F43 = {
+			isa = PBXGroup;
+			children = (
+				503742492CD3608C009C1F43 /* Cucurbita */,
+				5037422A2CD35EF5009C1F43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5037422A2CD35EF5009C1F43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				503742292CD35EF5009C1F43 /* Cucurbita.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		503742492CD3608C009C1F43 /* Cucurbita */ = {
+			isa = PBXGroup;
+			children = (
+				50D50E572CD3940B009B9F28 /* Info.plist */,
+				503742472CD3608C009C1F43 /* Ent.entitlements */,
+				50D50E3F2CD36CFD009B9F28 /* App */,
+				50D50E3D2CD36CEC009B9F28 /* Windows */,
+				50D50E3E2CD36CF4009B9F28 /* View */,
+				50D50E402CD36D04009B9F28 /* Persist */,
+				50D50E412CD36D0E009B9F28 /* Extension */,
+			);
+			path = Cucurbita;
+			sourceTree = "<group>";
+		};
+		50D50E3D2CD36CEC009B9F28 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				503742542CD3622C009C1F43 /* TopmostWindow.swift */,
+				503742562CD3626D009C1F43 /* TopmostWindowController.swift */,
+				50D50E4F2CD38F68009B9F28 /* NoneInteractWindow.swift */,
+				50D50E512CD38F8F009B9F28 /* NoneInteractWindowController.swift */,
+				503742582CD36293009C1F43 /* HostingController.swift */,
+				50D50E532CD38FD2009B9F28 /* DimmingController.swift */,
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
+		50D50E3E2CD36CF4009B9F28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				503742522CD361FA009C1F43 /* ViewModel.swift */,
+				50D50E422CD374AE009B9F28 /* ViewModel+Location.swift */,
+				5037425C2CD362DA009C1F43 /* ContentView.swift */,
+				501105882CD365E700AF74F0 /* CucurbitaView.swift */,
+				50D50E4D2CD3850C009B9F28 /* CucurbitaDeadView.swift */,
+				50D50E442CD378FE009B9F28 /* CucurbitaLightingView.swift */,
+				50D50E462CD37AA8009B9F28 /* LightingSparkleView.swift */,
+				50D50E552CD38FEA009B9F28 /* DimmingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50D50E3F2CD36CFD009B9F28 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				503742452CD3608C009C1F43 /* Assets.xcassets */,
+				501105842CD3658100AF74F0 /* InfoPlist.xcstrings */,
+				501105862CD3658700AF74F0 /* Localizable.xcstrings */,
+				5037424E2CD360B5009C1F43 /* main.swift */,
+				503742502CD361A3009C1F43 /* AppDelegate.swift */,
+				50D50E582CD39558009B9F28 /* AppDelegate+Menu.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		50D50E402CD36D04009B9F28 /* Persist */ = {
+			isa = PBXGroup;
+			children = (
+				50D50E352CD36CD9009B9F28 /* Persist.swift */,
+				50D50E362CD36CD9009B9F28 /* PersistProvider.swift */,
+				50D50E372CD36CD9009B9F28 /* PublishedPersist.swift */,
+				50D50E382CD36CD9009B9F28 /* UserDefaultPersistProvider.swift */,
+			);
+			path = Persist;
+			sourceTree = "<group>";
+		};
+		50D50E412CD36D0E009B9F28 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5037425A2CD362BB009C1F43 /* Ext+Window.swift */,
+				50D50E4B2CD37DF6009B9F28 /* Ext+Notification.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		503742282CD35EF5009C1F43 /* Cucurbita */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 503742382CD35EF6009C1F43 /* Build configuration list for PBXNativeTarget "Cucurbita" */;
+			buildPhases = (
+				503742252CD35EF5009C1F43 /* Sources */,
+				503742262CD35EF5009C1F43 /* Frameworks */,
+				503742272CD35EF5009C1F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cucurbita;
+			packageProductDependencies = (
+				50D50E492CD37DBD009B9F28 /* Pow */,
+			);
+			productName = Halloween24;
+			productReference = 503742292CD35EF5009C1F43 /* Cucurbita.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		503742212CD35EF5009C1F43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					503742282CD35EF5009C1F43 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = 503742242CD35EF5009C1F43 /* Build configuration list for PBXProject "Cucurbita" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 503742202CD35EF5009C1F43;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				50D50E482CD37DBD009B9F28 /* XCRemoteSwiftPackageReference "Pow" */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				503742282CD35EF5009C1F43 /* Cucurbita */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		503742272CD35EF5009C1F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				501105852CD3658100AF74F0 /* InfoPlist.xcstrings in Resources */,
+				5037424A2CD3608C009C1F43 /* Assets.xcassets in Resources */,
+				501105872CD3658700AF74F0 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		503742252CD35EF5009C1F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503742572CD3626D009C1F43 /* TopmostWindowController.swift in Sources */,
+				5037425B2CD362BB009C1F43 /* Ext+Window.swift in Sources */,
+				501105892CD365E700AF74F0 /* CucurbitaView.swift in Sources */,
+				50D50E522CD38F8F009B9F28 /* NoneInteractWindowController.swift in Sources */,
+				50D50E562CD38FEA009B9F28 /* DimmingView.swift in Sources */,
+				50D50E542CD38FD2009B9F28 /* DimmingController.swift in Sources */,
+				50D50E452CD378FE009B9F28 /* CucurbitaLightingView.swift in Sources */,
+				50D50E502CD38F68009B9F28 /* NoneInteractWindow.swift in Sources */,
+				5037425D2CD362DA009C1F43 /* ContentView.swift in Sources */,
+				503742552CD3622C009C1F43 /* TopmostWindow.swift in Sources */,
+				50D50E432CD374AE009B9F28 /* ViewModel+Location.swift in Sources */,
+				50D50E472CD37AA8009B9F28 /* LightingSparkleView.swift in Sources */,
+				503742512CD361A3009C1F43 /* AppDelegate.swift in Sources */,
+				503742532CD361FA009C1F43 /* ViewModel.swift in Sources */,
+				503742592CD36293009C1F43 /* HostingController.swift in Sources */,
+				50D50E592CD39558009B9F28 /* AppDelegate+Menu.swift in Sources */,
+				50D50E4C2CD37DF6009B9F28 /* Ext+Notification.swift in Sources */,
+				50D50E392CD36CD9009B9F28 /* PublishedPersist.swift in Sources */,
+				50D50E3A2CD36CD9009B9F28 /* PersistProvider.swift in Sources */,
+				50D50E3B2CD36CD9009B9F28 /* UserDefaultPersistProvider.swift in Sources */,
+				50D50E3C2CD36CD9009B9F28 /* Persist.swift in Sources */,
+				5037424F2CD360B5009C1F43 /* main.swift in Sources */,
+				50D50E4E2CD3850C009B9F28 /* CucurbitaDeadView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		503742362CD35EF6009C1F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		503742372CD35EF6009C1F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		503742392CD35EF6009C1F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Cucurbita/Ent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 964G86XT2P;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cucurbita/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Cucurbita;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 Lakr w/ Friends. All Rights Reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.Halloween24;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5037423A2CD35EF6009C1F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Cucurbita/Ent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 964G86XT2P;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cucurbita/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Cucurbita;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 Lakr w/ Friends. All Rights Reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.Halloween24;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		503742242CD35EF5009C1F43 /* Build configuration list for PBXProject "Cucurbita" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				503742362CD35EF6009C1F43 /* Debug */,
+				503742372CD35EF6009C1F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		503742382CD35EF6009C1F43 /* Build configuration list for PBXNativeTarget "Cucurbita" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				503742392CD35EF6009C1F43 /* Debug */,
+				5037423A2CD35EF6009C1F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		50D50E482CD37DBD009B9F28 /* XCRemoteSwiftPackageReference "Pow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EmergeTools/Pow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		50D50E492CD37DBD009B9F28 /* Pow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50D50E482CD37DBD009B9F28 /* XCRemoteSwiftPackageReference "Pow" */;
+			productName = Pow;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 503742212CD35EF5009C1F43 /* Project object */;
+}

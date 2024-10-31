@@ -1,0 +1,89 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "🎃" : {
+      "shouldTranslate" : false
+    },
+    "About" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关于"
+          }
+        }
+      }
+    },
+    "Happy Halloween!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Happy Halloween!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "万圣节快乐～"
+          }
+        }
+      }
+    },
+    "Quite" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quite"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出"
+          }
+        }
+      }
+    },
+    "Your Cucurbita is dead! Click to light it up!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Cucurbita is dead! Click to light it up!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的南瓜寄了！快点亮它！！！"
+          }
+        }
+      }
+    },
+    "Your Cucurbita is diving! Click NOW to save it!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Cucurbita is diving! Click NOW to save it!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的南瓜马上要寄了！！！！！！！"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
