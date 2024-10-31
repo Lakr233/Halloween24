@@ -34,6 +34,9 @@
 		50D50E542CD38FD2009B9F28 /* DimmingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E532CD38FD2009B9F28 /* DimmingController.swift */; };
 		50D50E562CD38FEA009B9F28 /* DimmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E552CD38FEA009B9F28 /* DimmingView.swift */; };
 		50D50E592CD39558009B9F28 /* AppDelegate+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D50E582CD39558009B9F28 /* AppDelegate+Menu.swift */; };
+		689F16002CD3B30600AF554E /* CucurbitaMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F15FF2CD3B30600AF554E /* CucurbitaMetalView.swift */; };
+		689F16022CD3B57100AF554E /* CucurbitaMetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F16012CD3B57100AF554E /* CucurbitaMetalRenderer.swift */; };
+		689F16062CD3BABD00AF554E /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 689F16052CD3BABD00AF554E /* Shader.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		50D50E552CD38FEA009B9F28 /* DimmingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingView.swift; sourceTree = "<group>"; };
 		50D50E572CD3940B009B9F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		50D50E582CD39558009B9F28 /* AppDelegate+Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Menu.swift"; sourceTree = "<group>"; };
+		689F15FF2CD3B30600AF554E /* CucurbitaMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucurbitaMetalView.swift; sourceTree = "<group>"; };
+		689F16012CD3B57100AF554E /* CucurbitaMetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucurbitaMetalRenderer.swift; sourceTree = "<group>"; };
+		689F16052CD3BABD00AF554E /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 		50D50E3E2CD36CF4009B9F28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				68CBEBD12CD3B25600483DAF /* Metal */,
 				503742522CD361FA009C1F43 /* ViewModel.swift */,
 				50D50E422CD374AE009B9F28 /* ViewModel+Location.swift */,
 				5037425C2CD362DA009C1F43 /* ContentView.swift */,
@@ -169,6 +176,16 @@
 				50D50E4B2CD37DF6009B9F28 /* Ext+Notification.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		68CBEBD12CD3B25600483DAF /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				689F15FF2CD3B30600AF554E /* CucurbitaMetalView.swift */,
+				689F16012CD3B57100AF554E /* CucurbitaMetalRenderer.swift */,
+				689F16052CD3BABD00AF554E /* Shader.metal */,
+			);
+			path = Metal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,15 +266,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689F16062CD3BABD00AF554E /* Shader.metal in Sources */,
 				503742572CD3626D009C1F43 /* TopmostWindowController.swift in Sources */,
 				5037425B2CD362BB009C1F43 /* Ext+Window.swift in Sources */,
 				501105892CD365E700AF74F0 /* CucurbitaView.swift in Sources */,
+				689F16002CD3B30600AF554E /* CucurbitaMetalView.swift in Sources */,
 				50D50E522CD38F8F009B9F28 /* NoneInteractWindowController.swift in Sources */,
 				50D50E562CD38FEA009B9F28 /* DimmingView.swift in Sources */,
 				50D50E542CD38FD2009B9F28 /* DimmingController.swift in Sources */,
 				50D50E452CD378FE009B9F28 /* CucurbitaLightingView.swift in Sources */,
 				50D50E502CD38F68009B9F28 /* NoneInteractWindow.swift in Sources */,
 				5037425D2CD362DA009C1F43 /* ContentView.swift in Sources */,
+				689F16022CD3B57100AF554E /* CucurbitaMetalRenderer.swift in Sources */,
 				503742552CD3622C009C1F43 /* TopmostWindow.swift in Sources */,
 				50D50E432CD374AE009B9F28 /* ViewModel+Location.swift in Sources */,
 				50D50E472CD37AA8009B9F28 /* LightingSparkleView.swift in Sources */,
@@ -407,7 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 964G86XT2P;
+				DEVELOPMENT_TEAM = FY3C8MQXF9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -421,7 +441,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.Halloween24;
+				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.Halloween24.sg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -437,7 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 964G86XT2P;
+				DEVELOPMENT_TEAM = 6CMYQQFFT8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -451,7 +471,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.Halloween24;
+				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.Halloween24.sg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
