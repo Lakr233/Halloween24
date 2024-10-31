@@ -1,6 +1,25 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "..." : {
+      "shouldTranslate" : false
+    },
+    "... and it will shine again." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "... and it will shine again."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "… 然后它就又会发光啦～"
+          }
+        }
+      }
+    },
     "🎃" : {
       "shouldTranslate" : false
     },
@@ -16,6 +35,86 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "关于"
+          }
+        }
+      }
+    },
+    "Btw, you can drag it around." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Btw, you can drag it around."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "哦对了，你可以拖着它到处跑！"
+          }
+        }
+      }
+    },
+    "But the light will fade away over time." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "But the light will fade away over time."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "但是光芒会一点点消失。"
+          }
+        }
+      }
+    },
+    "Click to light it up!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Click to light it up!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点击南瓜瓜来将它点亮。"
+          }
+        }
+      }
+    },
+    "Click to save it!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Click to save it!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点击南瓜瓜就能保住它的性命！"
+          }
+        }
+      }
+    },
+    "Enjoy your Halloween!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enjoy your Halloween!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "万圣节快乐呀！"
           }
         }
       }
@@ -36,6 +135,38 @@
         }
       }
     },
+    "If you did't light it up in a while, it will dive." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you did't light it up in a while, it will dive."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果你忘记点亮南瓜瓜太久，它可能会丧命！"
+          }
+        }
+      }
+    },
+    "Next Hint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next Hint"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一条提示"
+          }
+        }
+      }
+    },
     "Quite" : {
       "localizations" : {
         "en" : {
@@ -48,6 +179,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "退出"
+          }
+        }
+      }
+    },
+    "That's all, have fun!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "That's all, have fun!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "就这些啦，玩的开心～"
+          }
+        }
+      }
+    },
+    "This is your Cucurbita, it will shine for you." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is your Cucurbita, it will shine for you."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是你的南瓜瓜，它会为你闪耀。"
           }
         }
       }

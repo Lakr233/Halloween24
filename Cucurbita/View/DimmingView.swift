@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DimmingView: View {
-    @State var opacityControl: Double = 0
+    @State var bornAnimation: Double = 0
     @StateObject var vm = ViewModel.shared
 
     var animation: Animation {
@@ -17,18 +17,23 @@ struct DimmingView: View {
 
     let maxOpacity: Double = 0.9
 
+    var decisionOpacity: Double {
+        if !vm.tutorialCompleted { return 0.75 }
+        return maxOpacity - vm.life * maxOpacity
+    }
+
     var body: some View {
         ZStack {
             Rectangle()
-                .opacity(opacityControl)
+                .opacity(bornAnimation)
+                .foregroundStyle(.black.opacity(decisionOpacity))
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                        opacityControl = 1
+                        bornAnimation = 1
                     }
                 }
-                .foregroundStyle(.black.opacity(maxOpacity - vm.life * maxOpacity))
         }
-        .animation(animation, value: opacityControl)
+        .animation(animation, value: bornAnimation)
         .animation(animation, value: vm.life)
     }
 }

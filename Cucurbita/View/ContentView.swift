@@ -8,6 +8,8 @@
 import Pow
 import SwiftUI
 
+private let tikInterval: TimeInterval = 2
+
 struct ContentView: View {
     @StateObject var vm = ViewModel.shared
 
@@ -30,36 +32,62 @@ struct ContentView: View {
         0.5 + 0.5 * vm.life
     }
 
-    let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: tikInterval, on: .main, in: .common).autoconnect()
 
-    var hint: String {
+    var hintText: String {
+        if !vm.tutorialCompleted,
+           vm.tutorialIndex >= 0,
+           vm.tutorialIndex < vm.tutorialList.count
+        {
+            return vm.tutorialList[vm.tutorialIndex]
+        }
         if vm.life > 0.99 {
-            NSLocalizedString("Happy Halloween!", comment: "")
+            return NSLocalizedString("Happy Halloween!", comment: "")
         } else if vm.life > 0.5 {
-            ""
+            return ""
         } else if isDead {
-            NSLocalizedString("Your Cucurbita is dead! Click to light it up!", comment: "")
+            return NSLocalizedString("Your Cucurbita is dead! Click to light it up!", comment: "")
         } else {
-            NSLocalizedString("Your Cucurbita is diving! Click NOW to save it!", comment: "")
+            return NSLocalizedString("Your Cucurbita is diving! Click NOW to save it!", comment: "")
         }
     }
 
     var body: some View {
         GeometryReader { r in
             ZStack {
-                Text(hint)
-                    .fontDesign(.rounded)
-                    .contentTransition(.numericText())
-                    .padding(4)
-                    .background(.thinMaterial)
-                    .clipShape(RoundedRectangle(cornerRadius: 6))
-                    .frame(height: vm.cucurbitaSize, alignment: .bottom)
-                    .opacity(hint.isEmpty ? 0 : 1)
-                    .animation(animation, value: hint)
-                    .offset(
-                        x: r.size.width / 2 * CGFloat(vm.cucurbitaUnionLocation.x),
-                        y: r.size.height / 2 * CGFloat(vm.cucurbitaUnionLocation.y) + 32
-                    )
+                VStack(alignment: .center, spacing: 8) {
+                    Rectangle()
+                        .hidden()
+                        .frame(width: vm.cucurbitaSize, height: vm.cucurbitaSize)
+                        .padding(16)
+                    Text(hintText)
+                        .bold()
+                        .padding(4)
+                        .background(.thinMaterial)
+                        .clipShape(RoundedRectangle(cornerRadius: 6))
+                    if !vm.tutorialCompleted {
+                        Text("Next Hint")
+                            .underline()
+                            .bold()
+                            .padding(4)
+                            .background(.thinMaterial)
+                            .clipShape(RoundedRectangle(cornerRadius: 6))
+                            .onTapGesture {
+                                vm.nextTip()
+                            }
+                            .transition(.opacity)
+                    }
+                }
+                .fontDesign(.rounded)
+                .contentTransition(.numericText())
+                .opacity(hintText.isEmpty ? 0 : 1)
+                .animation(animation, value: hintText)
+                .animation(animation, value: vm.tutorialIndex)
+                .animation(animation, value: vm.tutorialCompleted)
+                .offset(
+                    x: r.size.width / 2 * CGFloat(vm.cucurbitaUnionLocation.x),
+                    y: r.size.height / 2 * CGFloat(vm.cucurbitaUnionLocation.y) + 32
+                )
 
                 CucurbitaView()
                     .hidden()
@@ -92,7 +120,7 @@ struct ContentView: View {
                                 .conditionalEffect(
                                     .repeat(
                                         .glow(color: .light, radius: 32),
-                                        every: 3
+                                        every: tikInterval
                                     ),
                                     condition: !isDead
                                 )
